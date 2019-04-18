@@ -6,7 +6,7 @@ A Flutter plugin to Visualize the audio being played (only android).
 * Add this to your pubspec.yaml
   ```
   dependencies:
-  flutter_visualizers: ^0.0.1
+  flutter_visualizers: ^0.0.2
   
   ```
 * Get package from Pub:
