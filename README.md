@@ -45,7 +45,13 @@ A Flutter plugin to Visualize the audio being played (only android).
     Here playerId is the AudioSessionId which id needed to initialize the Visualizer. (Required Audio Recording Permission in Android)
 
     See the Complete [Example](https://github.com/iamSahdeep/FlutterVisualizers/tree/master/example)
+### Sample 
 
+![Video](https://github.com/iamSahdeep/FlutterVisualizers/blob/master/assets/sample.gif)
+
+- Apk
+ [Download](https://github.com/iamSahdeep/FlutterVisualizers/blob/master/assets/app-release.apk)
+ 
 ### Credits
    - [GautamChibde](https://github.com/GautamChibde) for awesome [Visualizers](https://github.com/GautamChibde/android-audio-visualizer) in Android from which I made this.
    - [Matt Carroll](https://github.com/matthew-carroll) for this [UI](https://github.com/matthew-carroll/flutter_ui_challenge_music_player/blob/recording/lib/main.dart)
