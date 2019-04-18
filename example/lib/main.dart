@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'package:flutter_visualizers_example/Ui.dart';
-import 'package:flutter_visualizers_example/methodcalls.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,21 +45,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-* new Visualizer(
-            builder: (BuildContext context, List<int> wave) {
-              return new CustomPaint(
-                painter: new CircularLineVisualizer(
-                  waveData: wave,
-                  height: MediaQuery.of(context).size.height,
-                  width : MediaQuery.of(context).size.width,
-                  color: Colors.black,
-                ),
-                child: new Container(),
-              );
-            },
-            id: playerID,
-          ),
-          */
-
