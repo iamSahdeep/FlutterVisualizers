@@ -1,11 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_visualizers/visualizer.dart';
-import 'package:flutter_visualizers/Visualizers/LineVisualizer.dart';
-import 'package:flutter_visualizers/Visualizers/CircularBarVisualizer.dart';
-import 'package:flutter_visualizers/Visualizers/MultiWaveVisualizer.dart';
-import 'package:flutter_visualizers/Visualizers/LineBarVisualizer.dart';
-import 'package:flutter_visualizers/Visualizers/CircularLineVisualizer.dart';
 import 'package:flutter_visualizers/Visualizers/BarVisualizer.dart';
+import 'package:flutter_visualizers/Visualizers/CircularBarVisualizer.dart';
+import 'package:flutter_visualizers/Visualizers/CircularLineVisualizer.dart';
+import 'package:flutter_visualizers/Visualizers/LineBarVisualizer.dart';
+import 'package:flutter_visualizers/Visualizers/LineVisualizer.dart';
+import 'package:flutter_visualizers/Visualizers/MultiWaveVisualizer.dart';
+import 'package:flutter_visualizers/visualizer.dart';
 import 'package:flutter_visualizers_example/methodcalls.dart';
 
 class PlaySong extends StatefulWidget {
@@ -34,7 +36,6 @@ class _VisState extends State<PlaySong> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-
     methodCalls.playSong();
     int sessionId;
     // Platform messages may fail, so we use a try/catch PlatformException.
@@ -48,7 +49,9 @@ class _VisState extends State<PlaySong> {
       playerID = sessionId;
     });
   }
+
   String newValue;
+
   Widget dropdownWidget() {
     return DropdownButton(
       //map each value from the lIst to our dropdownMenuItem widget

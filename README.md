@@ -42,8 +42,8 @@ A Flutter plugin to Visualize the audio being played (only android).
             id: playerID,
           )
     ```
-    Here playerId is the AudioSessionId which id needed to initialize the Visualizer.
-    
+    Here playerId is the AudioSessionId which id needed to initialize the Visualizer. (Required Audio Recording Permission in Android)
+
     See the Complete [Example](https://github.com/iamSahdeep/FlutterVisualizers/tree/master/example)
 
 ### Credits
