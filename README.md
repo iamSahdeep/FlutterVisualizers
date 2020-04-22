@@ -1,4 +1,4 @@
-# flutter_visualizers (Depreciated)[![Pub](https://img.shields.io/pub/v/flutter_visualizers.svg?style=flat-square)](https://pub.dartlang.org/packages/flutter_visualizers)
+# flutter_visualizers (Depreciated & Not maintaining)[![Pub](https://img.shields.io/pub/v/flutter_visualizers.svg?style=flat-square)](https://pub.dartlang.org/packages/flutter_visualizers)
 
 A Flutter plugin to Visualize the audio being played (only android).
 
