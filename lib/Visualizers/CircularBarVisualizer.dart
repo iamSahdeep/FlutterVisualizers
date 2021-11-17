@@ -9,7 +9,7 @@ import 'package:vector_math/vector_math_64.dart';
 class CircularBarVisualizer extends CustomPainter {
 
   final List<int> waveData;
-  Float32List points;
+  Float32List? points;
   final double height;
   final double width;
   final Color color;
@@ -19,10 +19,10 @@ class CircularBarVisualizer extends CustomPainter {
   double radius = -1;
 
   CircularBarVisualizer({
-    @required this.waveData,
-    @required this.height,
-    @required this.width,
-    @required this.color,
+    required this.waveData,
+    required this.height,
+    required this.width,
+    required this.color,
     this.density = 100,
     this.gap = 2
   }) : wavePaint = new Paint()
@@ -45,7 +45,7 @@ class CircularBarVisualizer extends CustomPainter {
     }
     canvas.drawCircle(new Offset(getWidth() / 2, getHeight() / 2), radius.toDouble(), wavePaint);
     if (waveData != null) {
-      if (points == null || points.length < waveData.length * 4) {
+      if (points == null || points!.length < waveData.length * 4) {
         points = new Float32List(waveData.length * 4);
       }
       double angle = 0;
@@ -54,24 +54,24 @@ class CircularBarVisualizer extends CustomPainter {
         int x = (i * 8.5).ceil();
         int t = (((-(waveData[x]).abs() + 128)) * (getHeight()/4) ~/ 128).abs();
 
-        points[i * 4] = getWidth() / 2
+        points![i * 4] = getWidth() / 2
             + radius
                 * cos(radians(angle));
 
-        points[i * 4 + 1] = getHeight() / 2
+        points![i * 4 + 1] = getHeight() / 2
             + radius
                 *sin(radians(angle));
 
-        points[i * 4 + 2] =getWidth() / 2
+        points![i * 4 + 2] =getWidth() / 2
             + (radius + t)
                 * cos(radians(angle));
 
-        points[i * 4 + 3] =  getHeight() / 2
+        points![i * 4 + 3] =  getHeight() / 2
             + (radius + t)
                 *sin(radians(angle));
         }
 
-        canvas.drawRawPoints(PointMode.lines, points, wavePaint);
+        canvas.drawRawPoints(PointMode.lines, points!, wavePaint);
     }
   }
 

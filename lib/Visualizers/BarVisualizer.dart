@@ -12,10 +12,10 @@ class BarVisualizer extends CustomPainter {
   final int gap;
 
   BarVisualizer({
-    @required this.waveData,
-    @required this.height,
-    @required this.width,
-    @required this.color,
+    required this.waveData,
+    required this.height,
+    required this.width,
+    required this.color,
     this.density = 100,
     this.gap = 2
   }) : wavePaint = new Paint()

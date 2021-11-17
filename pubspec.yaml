@@ -1,11 +1,11 @@
 name: flutter_visualizers
-description: A Flutter plugin to Visualize the audio being played (only android).
+description: A Flutter plugin to Visualize the audio being played
 version: 0.0.2
-author: Sahdeep Singh <sahdeepsingh98@gmail.com>
+author: Sahdeep Singh <sahdeepsingh98@gmail.com>, Nyamkhuu Buyanjargal <nyamkhuu.bu@gmail.com>
 homepage: https://github.com/iamSahdeep/FlutterVisualizers
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:

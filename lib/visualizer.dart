@@ -4,8 +4,8 @@ import 'package:flutter_visualizers/flutter_visualizers.dart';
 
 class Visualizer extends StatefulWidget {
 
-  final Function(BuildContext context, List<int> fft) builder;
-  int id;
+  final Function(BuildContext context, List<int> fft)? builder;
+  int? id;
   Visualizer({
     this.builder, this.id
   });
@@ -16,7 +16,7 @@ class Visualizer extends StatefulWidget {
 
 class _VisualizerState extends State<Visualizer> {
 
-  AudioVisualizer visualizer;
+  late AudioVisualizer visualizer;
   List<int> fft = const [];
   @override
   void initState() {
@@ -38,6 +38,6 @@ class _VisualizerState extends State<Visualizer> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.builder(context, fft);
+    return widget.builder!(context, fft);
   }
 }

@@ -10,13 +10,13 @@ class LineBarVisualizer extends CustomPainter {
   final Paint wavePaint;
   final int density;
   final int gap ;
-  List<double> points;
+  List<double>? points;
 
   LineBarVisualizer({
-    @required this.waveData,
-    @required this.height,
-    @required this.width,
-    @required this.color,
+    required this.waveData,
+    required this.height,
+    required this.width,
+    required this.color,
     this.density = 100,
     this.gap = 2
   }) : wavePaint = new Paint()

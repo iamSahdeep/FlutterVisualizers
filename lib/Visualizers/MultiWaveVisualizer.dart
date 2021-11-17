@@ -9,9 +9,9 @@ class MultiWaveVisualizer extends CustomPainter {
   final Paint wavePaint;
 
   MultiWaveVisualizer({
-    @required this.waveData,
-    @required this.height,
-    @required this.color,
+    required this.waveData,
+    required this.height,
+    required this.color,
   }) : wavePaint = new Paint()
     ..color = color.withOpacity(0.75)
     ..style = PaintingStyle.fill,
@@ -67,7 +67,7 @@ class MultiWaveVisualizer extends CustomPainter {
     canvas.drawPath(path, wavePaint);
   }
 
-  List<int> _createHistogram(List<int> samples, int bucketCount, [int start, int end]) {
+  List<int> _createHistogram(List<int> samples, int bucketCount, [int? start, int? end]) {
     if (start == end) {
       return const [];
     }
